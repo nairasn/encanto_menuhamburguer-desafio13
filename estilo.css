@@ -1,0 +1,177 @@
+/* paleta de cores: 
+rosa: #F2509C
+azul: #05DBF3
+amarelo: #F2D74C
+bege: #F1C48D
+marrom: #8C3402 
+roxo: #673AB7
+roxo forte: #46277A */
+
+:root{
+    --cor-site:#F2D74C;
+}
+
+html{
+font-family: 'Nunito', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+}
+
+.header{
+    /* width: auto; */
+    text-align: center;
+    margin: auto;
+    background-color: #46277A;
+}
+
+.header-logo{
+    width: 10em;
+    height: 100%;
+    margin: 1em;
+}
+
+#hamburguer{
+    background-color: var(--cor-site);
+    color: #46277A;
+    display: block;
+    text-align: center;
+    padding: .3em;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.header-nav{
+    background-color: #46277A;
+     display: none; /* para não aparecer automatico sem clicar no menu hamburguer */
+}
+
+/* classe show para aparecer e sumir menu */
+.header-nav.show{
+    display: block;
+}
+
+ul{
+    margin: 0;
+}
+
+.header-nav ul{
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.header-nav a{
+    color: var(--cor-site);
+    text-decoration:none;
+    display: block;
+    padding: 1em;   
+}
+
+.header-nav a:hover{
+    /* background-color: color-mix(in srgb, var(--cor-site), #ffffff 30%); */
+    background-color: var(--cor-site);
+    color: #673AB7;
+    text-decoration: none;
+    display: block; 
+}
+
+
+@media screen and (min-width: 48em){
+
+    #hamburguer{
+        display:none;
+
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #46277A;
+    }
+
+    .header-logo{
+        margin-left: 2em;
+    }
+
+    .header-nav{
+        background-color: initial;
+        display: block;
+    }
+
+    .header-nav ul{
+        margin-right: 2em;
+        font-size: .9em;
+    }
+
+    .header-nav li{
+        display: inline-block;
+    }
+
+    .header-nav a{
+        border-radius: 5px;
+    }
+
+    .header-nav a:hover{
+        color: #673AB7;
+        background-color: var(--cor-site);
+    }
+
+}
+
+
+body{
+    background-image: url(img/Encanto_2560x1920.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left;
+}
+
+
+.rodape{
+    background-color: #F2509C;
+    color: var(--cor-site);
+    text-align: center;
+    padding: 0.5em;
+
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.icone img{
+    width: 25px;
+    padding-right: 5px;
+}
+
+
+@media screen and (min-width: 48em){
+
+    .icone img{
+        width: 40px;
+        padding-right: 5px;
+    }
+
+    .footer-icon{
+        flex-direction:row;
+    }
+
+    /* .header-nav a:hover{
+        color: var(--cor-site);
+        background-color: color-mix(in srgb, var(--cor-site), #ffffff 80%);
+    } */
+
+}
